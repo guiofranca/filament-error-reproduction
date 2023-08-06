@@ -13,18 +13,22 @@ https://demo.filamentphp.com/shop/customers/983/edit?activeRelationManager=1
 On `Customer` model, `public function payments(): HasManyThrough`.
 
 # Steps to reproduce
-Start up the containers
-```bash
-sail up -d
+Copy .env
 ```
-or
-```bash
-docker-compose up -d
+cp .env.example .env
 ```
+
 Install dependencies
+
+https://laravel.com/docs/10.x/sail#installing-composer-dependencies-for-existing-projects
+
+Or
+
 ```
 composer install
 ```
+
+If Laravel Sail was used, start it with `sail up -d`.
 
 Migrate and seed
 

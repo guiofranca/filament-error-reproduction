@@ -10,9 +10,9 @@ class GrandChild extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'child_id'];
 
-    public function child() : BelongsTo
+    public function child(): BelongsTo
     {
         return $this->belongsTo(Child::class);
     }

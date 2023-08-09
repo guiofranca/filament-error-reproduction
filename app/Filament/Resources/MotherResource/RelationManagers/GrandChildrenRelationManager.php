@@ -21,9 +21,9 @@ class GrandChildrenRelationManager extends RelationManager
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Select::make('child')
+                Forms\Components\Select::make('child_id')
                     ->required()
-                    ->relationship('child', 'name', fn(Builder $query) => $query->where('mother_id',$this->getOwnerRecord()->id)),
+                    ->relationship('child', 'name', fn (Builder $query) => $query->where('mother_id', $this->getOwnerRecord()->id)),
             ]);
     }
 
